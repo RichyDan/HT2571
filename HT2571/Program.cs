@@ -2,7 +2,7 @@
 using HT2571.Repositories;
 using HT2571.Views;
 
-namespace HW_25_7_1
+namespace HT2571
 {
     class Program
     {
