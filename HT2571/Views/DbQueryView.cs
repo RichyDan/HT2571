@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW_25_7_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,32 @@ using System.Threading.Tasks;
 
 namespace HT2571.Views
 {
-    internal class DbQueryView
+    public class DbQueryView
     {
+        public void Show()
+        {
+            Console.WriteLine("Запрос в БД пользователей (нажмите 1)");
+            Console.WriteLine("Запрос в БД книг (нажмите 2)");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    {
+                        Program.dbQueryUsersView.Show();
+                        break;
+                    }
+                case "2":
+                    {
+                        Program.dbQueryBooksView.Show();
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("Некорректная команда");
+                        break;
+                    }
+
+            }
+        }
     }
 }
